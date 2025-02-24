@@ -75,6 +75,9 @@ class Create extends Component
             'content' => $this->content,
         ]);
 
+        // Kirim event ke semua komponen yang sedang aktif
+        $this->dispatch('post-updated');
+
         // Flash message
         session()->flash('message', 'Data Berhasil Disimpan.');
 

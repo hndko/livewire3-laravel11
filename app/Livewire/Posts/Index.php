@@ -6,9 +6,17 @@ use App\Models\Post;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Storage;
+use Livewire\Attributes\On;
 
 class Index extends Component
 {
+    #[On('post-updated ')]
+    public function refreshPosts()
+    {
+        // Method ini akan dipanggil ketika event 'post-updated' diterima
+        // Tidak perlu melakukan apa-apa karena Livewire otomatis akan me-render ulang
+    }
+
     public function render()
     {
         $data = [

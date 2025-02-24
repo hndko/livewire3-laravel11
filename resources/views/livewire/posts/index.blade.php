@@ -28,7 +28,7 @@
                                 <th scope="col" style="width: 15%">Actions</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody wire:poll.5s>
                             @forelse ($posts as $post)
                                 <tr>
                                     <td class="text-center">
